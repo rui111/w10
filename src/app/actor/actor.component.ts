@@ -65,6 +65,7 @@ export class ActorComponent implements OnInit {
 
   changeSection(sectionId) {
     this.section = sectionId;
+    console.log(this.section)
     this.resetValues();
   }
 
@@ -129,9 +130,4 @@ export class ActorComponent implements OnInit {
   }
 
     //Get all Actors
-    onExtraTask() {
-      this.dbService.getExtraTask().subscribe((data: any[]) => {
-        this.actorsDB = data;
-      });
-    }
 }
